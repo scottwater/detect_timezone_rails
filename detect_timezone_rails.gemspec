@@ -7,11 +7,13 @@ Gem::Specification.new do |s|
   s.version     = DetectTimezoneRails::VERSION
   s.authors     = ["Scott Watermasysk"]
   s.email       = ["scottwater@gmail.com"]
-  s.homepage    = "http://www.scottw.com"
+  s.homepage    = "https://rubygems.org/gems/detect_timezone_rails"
   s.summary     = %q{Simple javascript timezone detection}
   s.description = %q{Simple javascript timezone detection}
 
   s.rubyforge_project = "detect_timezone_rails"
+  
+  s.add_dependency "railties", "~> 3.1"
 
   s.files         = `git ls-files`.split("\n")
   s.test_files    = `git ls-files -- {test,spec,features}/*`.split("\n")

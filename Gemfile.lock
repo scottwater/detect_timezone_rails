@@ -1,0 +1,14 @@
+PATH
+  remote: .
+  specs:
+    detect_timezone_rails (0.0.1)
+
+GEM
+  remote: http://rubygems.org/
+  specs:
+
+PLATFORMS
+  ruby
+
+DEPENDENCIES
+  detect_timezone_rails!

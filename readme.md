@@ -8,7 +8,7 @@ _NOTE:_ There is no dependency on jquery, so you can also use this to simply bun
 
 In your Gemfile: 
 
-	require detect_timezone_rails
+	gem 'detect_timezone_rails'
 	
 Require detect\_timezone and jquery.detect\_timezone in your Javascript manifest (i.e. application.js)
 

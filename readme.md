@@ -24,7 +24,7 @@ Then some where else, wire it up using the plugin (remember to require jquery as
 	
 ## Disclaimers 
 
-Only works with Rails 3.1+ at the moment. I might do a generator at some point, but if you have a moment, that would be a nice pull request. 
+Requires Rails 3.1+.
 
 ## License 
 

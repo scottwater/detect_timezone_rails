@@ -34,7 +34,7 @@
       if(settings.debug) {
         alert('no timezone to be found. using default.')
       }
-      return settings.default
+      return settings['default']
     }
   };
   

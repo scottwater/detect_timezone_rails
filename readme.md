@@ -21,7 +21,13 @@ Then some where else, wire it up using the plugin (remember to require jquery as
 		$('#your_input_id').set_timezone(); 
 	});
 	
-	
+If you are using the standard rails form helpers to generate a timezone select, you may pass the
+`format` option when calling `set_timezone`, to return only the city name:
+
+    $(document).ready(function(){
+        $('#your_input_id').set_timezone({format: 'city'});
+    })
+
 ## Disclaimers 
 
 Requires Rails 3.1+.

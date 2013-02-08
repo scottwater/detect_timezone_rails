@@ -30,7 +30,7 @@
 
     var settings = {
       'debug' : false,
-      'default' : 'America/New_York'
+      'default' : '<%= Time.zone.tzinfo.identifier %>'
     };
 
     if(options) {

@@ -8,23 +8,35 @@
 
 (function( $ ){
 
+  var MAPPING = <%= ActiveSupport::TimeZone::MAPPING.to_json %>;
+
   $.fn.set_timezone = function(options) {
-    
-      this.val(this.get_timezone(options));      
+
+      var tz = this.get_timezone(options);
+      var thisobj = this;
+
+      $.each(MAPPING, function(key, value){
+        if(value == tz)
+        {
+          thisobj.val(key);
+          return false;
+        }
+      });
+
       return this;
   };
-  
+
   $.fn.get_timezone = function(options) {
-    
+
     var settings = {
       'debug' : false,
-      'default' : 'America/New_York'
+      'default' : '<%= Time.zone.tzinfo.identifier %>'
     };
-    
+
     if(options) {
       $.extend( settings, options );
     }
-    
+
     var tz_info = jstz.determine_timezone();
     var timezone = tz_info.timezone;
     if (timezone != 'undefined') {
@@ -37,5 +49,5 @@
       return settings['default']
     }
   };
-  
+
 })( jQuery );
